@@ -23,6 +23,5 @@ const athleteData = [
     { athlete: 'Kevin De Bruyne', team: 'Manchester City', income: 5980000 },
     { athlete: 'Paul Pogba', team: 'Manchester United', income: 15080000 }
 ];
-athleteData.map(athlete=>{const athleteIncomeStrings=athlete['athlete']+' in '+athlete['team']+' earned '+athlete['income'] 
-							console.log(athleteIncomeStrings)
-				});
+const athleteIncomeStrings=athleteData.map(athlete=>athlete=athlete['athlete']+' in '+athlete['team']+' earned '+athlete['income']+' euros');
+console.log(athleteIncomeStrings);

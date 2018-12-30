@@ -1,16 +1,17 @@
-/* Using .map()
+/* Combining .filter() and .map()
  *
- * Using the athleteData array and .map():
- *   - return a string for each item in the array in the following format
- *     <athlete> in <team> earned <income> euros
- *   - store the returned data in a new athleteIncomeStrings variable
+ * Using the musicData array, .filter, and .map():
+ *   - filter the athleteData array down to just the athletes that earn
+ *     more than 10,000,000 euros
+ *   - on the array returned from .filter(), call .map()
+ *   - use .map() to return a string for each item in the array in the
+ *     following format: "<athlete> is a great football player"
+ *   - store the array returned form .map() in a new "popular" variable
  *
  * Note:
  *   - do not delete the athleteData variable
  *   - do not alter any of the athleteData content
- *   - do not format the income number, leave it as a long string of digits
  */
- 
 const athleteData = [
     { athlete: 'Lionel Messi', team: 'Barcelona', income: 40000000 },
     { athlete: 'Cristiano Ronaldo', team: 'Juventus', income: 30000000 },
@@ -23,8 +24,5 @@ const athleteData = [
     { athlete: 'Kevin De Bruyne', team: 'Manchester City', income: 5980000 },
     { athlete: 'Paul Pogba', team: 'Manchester United', income: 15080000 }
 ];
-results=athleteData.filter(athlete=>athlete['income']>10000000  );
-results.map(athlete=>{
-					const popular=athlete['athlete']+' is a great football player'	
-					console.log(popular);
-})
+const popular=athleteData.filter(athlete=>athlete['income']>10000000 ).map(athlete=>athlete=athlete['athlete']+' is a great football player')
+console.log(popular);

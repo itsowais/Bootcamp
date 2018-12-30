@@ -1,14 +1,13 @@
-/* Using .map()
+/* Using .filter()
  *
- * Using the athleteData array and .map():
- *   - return a string for each item in the array in the following format
- *     <athlete> in <team> earned <income> euros
- *   - store the returned data in a new athleteIncomeStrings variable
+ * Using the athleteData array and .filter():
+ *   - return only athlete objects where the athlete's income is more than
+ *     7 characters long
+ *   - store the returned data in a new `results` variable
  *
  * Note:
  *   - do not delete the athleteData variable
  *   - do not alter any of the athleteData content
- *   - do not format the income number, leave it as a long string of digits
  */
  
 const athleteData = [
@@ -23,5 +22,5 @@ const athleteData = [
     { athlete: 'Kevin De Bruyne', team: 'Manchester City', income: 5980000 },
     { athlete: 'Paul Pogba', team: 'Manchester United', income: 15080000 }
 ];
-results=athleteData.filter(athlete=>athlete['income']/10000000>=1 );
+results=athleteData.filter(athlete=>athlete['income'].toString().length>7 );
 console.log(results);
